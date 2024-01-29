@@ -1,0 +1,53 @@
+﻿@model Formularz.Models.Dane
+
+@{
+    ViewData["Title"] = "Form";
+}
+
+
+@using (Html.BeginForm("Form", "Dane", FormMethod.Post, new { id = "registrationForm" }))
+{
+    @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+
+    <p>Twoje Imie: @Html.TextBoxFor(a => a.Imie)</p>
+            <p id="nameError" class="text-danger"></p>
+
+    <p>Twoje Nazwisko: @Html.TextBoxFor(a => a.Nazwisko)</p>
+            <p id="surnameError" class="text-danger"></p>
+
+    <p>Twoj email: @Html.TextBoxFor(a => a.Email)</p>
+            <p id="emailError" class="text-danger"></p>
+
+    <p>Hasło: @Html.PasswordFor(a => a.Haslo)</p>
+        <p id="passwordError" class="text-danger"></p>
+    
+        <p>Potwierdzenie hasła: @Html.PasswordFor(a => a.PotwierdzenieHasla)</p>
+        <p id="confirmPasswordError" class="text-danger"></p>
+
+    <p>Nr telefonu : @Html.TextBoxFor(a => a.NumerTelefonu)</p>
+    <p id="phoneError" class="text-danger"></p>
+
+    <p>Wiek : @Html.TextBoxFor(a => a.Wiek)</p>
+            <p id="ageError" class="text-danger"></p>
+
+    <p>Miasto : @Html.DropDownListFor(a => a.Miasto, Html.GetEnumSelectList<MiastoEnum>())</p>
+    
+    <div class="mb-3">         <button class="btn btn-primary" type="submit">Prześlij   </button>
+
+    </div>
+
+    <div class="mb-3">
+        <button class="btn btn-primary" type="reset">Resetuj   </button>
+
+        
+
+    </div>
+
+    
+
+
+
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+}
+
+<script src="~/js/validate.js"></script>

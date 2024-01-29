@@ -1,0 +1,78 @@
+
+body, h1, h2, h3, p, ul, ol, li, form, button {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+    
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.navbar-brand {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-toggler-icon {
+    background-color: #fff;
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+.nav-item {
+    margin-right: 15px;
+}
+
+.nav-link {
+    color: #007bff;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+main {
+    padding: 20px 0;
+}
+
+footer {
+    background-color: #f8f9fa;
+    color: #868e96;
+    padding: 0px 0; 
+    text-align: center;
+}
+
+
+form {
+    margin: 20px 0;
+}
+
+    form label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+
+    form input,
+    form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1p
